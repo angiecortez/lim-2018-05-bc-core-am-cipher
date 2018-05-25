@@ -1,0 +1,30 @@
+body {
+  background: url('http://www.criptored.upm.es/crypt4you/temas/privacidad-proteccion/leccion2/images/privacy.jpg')
+}
+textarea {
+    width: 400px;
+    height: 100px;
+    text-transform: uppercase;
+    margin: 10px 0 10px 0;
+}
+select {
+    width: 100px;
+}
+section {
+    margin: auto;
+    width: 90%;
+    padding: 20px;
+}
+h3, h5 {
+    text-align: center;
+}
+div {
+    padding: 20px;
+}
+input {
+    padding: 4px;
+    margin: 10px 0 10px 0;
+}
+#chains {
+    height: 250px;
+}
