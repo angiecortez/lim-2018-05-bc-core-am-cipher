@@ -6,33 +6,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section>
-  <h3>Cifrar es dificil</h3>
+  <h1>Cifrar es dificil</h1>
   <hr>
-  <div style="float:left;">
-    <label>Codigo por Encriptar:</label>
+    <div id="root"></div>
+  <div>
+    <label>Secret Message:</label>
     <br>
-    <textarea id="decrypted" placeholder="Pon tu mensaje aquí"></textarea>
+    <textarea class = "input" id="message" placeholder="Pon tu mensaje aquí"></textarea>
     <br>
-    <label>Codigo para Desencriptar:</label>
-    <br>
-    <textarea id="encrypted" placeholder="Pon tu mensaje cifrado Aquí"></textarea>
-  </div>
-  <div style="float:left;">
     <label>Key:</label>
     <br>
-    <input type="number" id="key" min="0" max="30" value="0"><br>
-    <input type="submit" onclick="encrypt()" value="Cifrar"><br>
-    <input type="submit" onclick="decrypt()" value="Decifrar"><br>
-    <input type="reset" onclick="clearBoxes()" value="Reiniciar"><br>
-  </div>
-  <div>
-    <label>Salida:</label><br>
-    <textarea id="chains" readonly placeholder="Mensajito"></textarea>
-  </div>
-</section>
+    <input class="input" id="offset" placeholder="# de espacios a correr"><br>
 
-    <div id="root"></div>
+    <input class="boton" id="cifr" value="Cifrar" type="submit"><br>
+    <input class="boton" id="decifr" value="Decifrar" type="submit"><br>
+    <!-- <input type="reset" onclick="clearBoxes()" value="Reiniciar"><br> -->
+ <label>Salida:</label><br>
+ <textarea class = "input" id="answer" readonly placeholder="Mensajito"></textarea>
+</div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
