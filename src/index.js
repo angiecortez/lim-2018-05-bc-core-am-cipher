@@ -3,7 +3,7 @@ const btn2 = document.getElementById('decifr');
 const key = document.getElementById('offset');
 const answer = document.getElementById('answer');
 const message = document.getElementById('message');
-
+const refresh = document.getElementById('refresh');
 
 
  btn1.addEventListener('click', () => {
@@ -16,3 +16,9 @@ btn2.addEventListener('click', () => {
  let yyy = key.value;
  answer.textContent = window.cipher.decode(xxx,yyy);
 });
+
+refresh.addEventListener('click', () => {
+  message.value = "";
+  key.value = "";
+  answer.value = "";
+})
