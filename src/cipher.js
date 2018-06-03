@@ -11,8 +11,8 @@ window.cipher = {
       else if (textChar >= 97 && textChar <= 122) {
         wordCif  += String.fromCharCode((textChar - 97 + parseInt(offset))%26+97);
         }
-      else if (textChar == 32){
-        wordCif += " ";
+      else {
+        wordCif += String.fromCharCode(textChar);
       }
     }
    //retornando el valor
@@ -26,25 +26,25 @@ window.cipher = {
     for(let i = 0; i < string.length; i++){
       let textChar = string.charCodeAt(i);
       if(textChar >= 65 && textChar <= 90) {
-      let upper = String.fromCharCode((textChar + 65 - parseInt(offset))%26+65);
-      wordNoCif += upper;
+      wordNoCif  += String.fromCharCode((textChar + 65 - parseInt(offset))%26+65);
       }
       else if (textChar >= 97 && textChar <= 122) {
-      let lower = String.fromCharCode((textChar + 97 - parseInt(offset)-12)%26+97);
-        wordNoCif += lower;
+      wordNoCif += String.fromCharCode((textChar + 97 - parseInt(offset)-12)%26+97);
         }
-      else if (textChar == 32) {
-        wordNoCif += " ";
+      else  {
+        wordNoCif += String.fromCharCode(textChar);
       }
     }
   return wordNoCif;
 },
-  // createCipherWithOffset : (string) => {
+
+  // createCipherWithOffset : (offset) => {
   //   let cipherWithOffset = {
-  //     encode : (offset) => cipher.encode(string,offset),
+  //     encode : (string) => cipher.encode(string,offset),
   //
-  //     decode : (offset) => cipher.decode(string,offset)
+  //     decode : (string) => cipher.decode(string,offset)
   //   }
+  // return cipherWithOffset;
   // }
 
 };
